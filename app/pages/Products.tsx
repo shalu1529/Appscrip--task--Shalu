@@ -35,6 +35,8 @@ const Products = () => {
         <h4 className="hide" onClick={toggleSidebar}>
           {showSidebar ? "Hide Filter" : "Show Filter"}
         </h4>
+
+        <div className="divider">|</div>
         <div>
           <select className="random">
             <option>Recommended</option>

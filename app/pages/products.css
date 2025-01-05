@@ -232,3 +232,115 @@
     text-align: left; 
   }
 }
+
+
+
+  
+
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  gap:15px
+}
+
+.random {
+  border: none; /* Remove border */
+  box-shadow: none; /* Remove shadow */
+  background-color: transparent; /* Optional: make it transparent */
+  font-size: 16px;
+  color: #333; /* Customize text color */
+  cursor: pointer;
+  outline: none;
+}
+
+.random:focus {
+  outline: none;
+}
+
+.divider {
+  display: none; /* Hide divider by default */
+  margin: 0 10px; /* Add spacing around the divider */
+  color: #888; /* Customize divider color */
+  font-weight: bold;
+}
+
+@media (max-width: 620px) {
+  .items {
+    display: none; /* Hide the "3425 ITEMS" text */
+  }
+
+  .divider {
+    display: block; /* Show the divider between "Show Filter" and "Recommended" */
+    margin: 0 10px; /* Ensure proper spacing */
+    color: #888; /* Adjust color for better visibility */
+    margin-left: 10px;
+  }
+
+  .section {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: flex-start; /* Align items to the left */
+    
+  }
+
+  .hide {
+    margin-right: 5px; /* Adjust spacing */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .random {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Dropdown styles */
+.random {
+  -webkit-appearance: none; /* Hides default dropdown arrow in WebKit browsers */
+  -moz-appearance: none;    /* Hides default dropdown arrow in Firefox */
+  appearance: none;         /* Hides default dropdown arrow in standard browsers */
+  background-color: #fff;   /* Set background color */
+  border: 1px solid #ccc;   /* Add border for better visibility */
+  padding: 10px 16px;       /* Add spacing inside the dropdown */
+  font-size: 14px;          /* Adjust font size */
+  color: #333;              /* Text color */
+  border-radius: 4px;       /* Add rounded corners */
+  width: 100%;              /* Make it responsive */
+  max-width: 200px;         /* Optional: limit the width */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+  position: relative;
+}
+
+/* Custom dropdown arrow */
+.random::after {
+  content: "▼"; /* Add custom dropdown arrow */
+  font-size: 12px;
+  position: absolute;
+  right: 12px; /* Position of the arrow */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent clicks on the arrow */
+  color: #666;          /* Arrow color */
+}
+
+/* Remove arrow on small screens */
+@media (max-width: 620px) {
+  .random::after {
+    content: ""; /* Hide the arrow */
+  }
+}
